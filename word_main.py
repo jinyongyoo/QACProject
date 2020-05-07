@@ -11,7 +11,7 @@ from word_tools import load_doc
 import numpy as np
 
 # load doc
-in_filename = 'data/aol/full/train.query.sequences.txt'
+in_filename = 'data/aol/full/temp_check.txt'
 # in_filename = 'data/aol/full/temp_check.txt'
 doc = load_doc(in_filename)
 lines = doc.split('\n')
