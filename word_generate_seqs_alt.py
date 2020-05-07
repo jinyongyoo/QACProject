@@ -1,7 +1,15 @@
 import random
 from word_tools import load_doc, clean_line, save_doc
+# GPU
+# import keras
+# import tensorflow as tf
 
-in_filename = 'data/aol/full/train.query.txt'
+
+# config = tf.ConfigProto( device_count = {'GPU': 1 , 'CPU': 56} ) 
+# sess = tf.Session(config=config) 
+# keras.backend.set_session(sess)
+
+in_filename = 'data/aol/full/test.query.txt'
 doc = load_doc(in_filename)
 lines = doc.split('\n')
 # print(doc[:200])
@@ -40,6 +48,6 @@ print('Total Sequences: %d' % len(sequences))
 
 print('Saving Sequences to a File')
 # save sequences to file
-out_file_name = 'data/aol/full/train.query.sequences.alt2.txt'
+out_file_name = 'data/aol/full/train.query.sequences.alt2.test.txt'
 save_doc(sequences, out_file_name)
 print('Saved... :)')
